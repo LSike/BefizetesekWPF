@@ -36,12 +36,15 @@ namespace BefizetesekWPF
             for (int i = 0; i < befizetesek.Count; i++)
             {
                 cbxSorszam.Items.Add(i.ToString());
-                cbxNev.Items.Add(befizetesek[i].Nev);
+                if (!cbxNev.Items.Contains(befizetesek[i].Nev))
+                {
+                    cbxNev.Items.Add(befizetesek[i].Nev);
+                }
             }
             //cbxNev.Items.Clear();
             //cbxNev.Items.Add("Béla");
             //cbxNev.Items.Add("Irénke");
-            cbxNev.Items.Add("Pimpike");
+            //cbxNev.Items.Add("Pimpike");
 
         }
 
