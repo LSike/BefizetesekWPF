@@ -9,8 +9,9 @@ namespace BefizetesekWPF
     internal class Befizetes
     {
         public Befizetes() { }
-        public Befizetes(string nev, int osszeg)
+        public Befizetes(int id, string nev, int osszeg)
         {
+            Id = id;
             Nev = nev;
             Osszeg = osszeg;
         }
@@ -18,10 +19,12 @@ namespace BefizetesekWPF
         public Befizetes(string sor)
         {
             string[] adatok = sor.Split(';');
-            Nev = adatok[0];
-            Osszeg = int.Parse(adatok[1]);
+            Id = int.Parse(adatok[0]);
+            Nev = adatok[1];
+            Osszeg = int.Parse(adatok[2]);
         }
 
+        public int Id { get; set; }
         public string Nev { get; set; }
         public int Osszeg { get; set; }
 
