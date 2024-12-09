@@ -1,0 +1,4 @@
+﻿Nev;Osszeg
+Béla;5000
+Irénke;6000
+Jocó;2000
