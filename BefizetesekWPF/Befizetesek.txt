@@ -1,4 +1,8 @@
-﻿Nev;Osszeg
-Béla;5000
-Irénke;6000
-Jocó;2000
+﻿Id;Nev;Osszeg
+1;Béla;5000
+2;Irénke;6000
+3;Jocó;2000
+4;Pimpike;400
+5;Béla;1000
+6;Jocó;500
+7;Béla;1000

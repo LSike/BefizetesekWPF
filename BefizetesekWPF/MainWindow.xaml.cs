@@ -41,7 +41,7 @@ namespace BefizetesekWPF
             //cbxNev.Items.Clear();
             //cbxNev.Items.Add("Béla");
             //cbxNev.Items.Add("Irénke");
-            //cbxNev.Items.Add("Jocó");
+            cbxNev.Items.Add("Pimpike");
 
         }
 
@@ -71,10 +71,32 @@ namespace BefizetesekWPF
             if (cbxNev.SelectedIndex != -1)
             {
                 Befizetes valasztott = befizetesek.FirstOrDefault(bf => bf.Nev == cbxNev.SelectedItem.ToString());
-                MegjelenitBefizetes(befizetesek.IndexOf(valasztott));
+                if (valasztott != null)
+                    MegjelenitBefizetes(befizetesek.IndexOf(valasztott));
+                else
+                    MessageBox.Show("Nincs ilyen nevű befizető!");
             }
             else
                 MessageBox.Show("Nincs kiválasztott elem!");
         }
+
+        //private void KeresesAlap(object sender, SelectionChangedEventArgs e)
+        //{
+        //    string valasztottNev = cbxNev.SelectedItem.ToString();
+
+        //    int index = 0;
+        //    while (index < befizetesek.Count && befizetesek[index].Nev != valasztottNev)
+        //    {
+        //        index++;
+        //    }
+        //    if(index < befizetesek.Count)
+        //    {
+        //        MegjelenitBefizetes(index);
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Nincs megfelelő befizető!");
+        //    }
+        //}
     }
 }
